@@ -1,24 +1,25 @@
-# README
+# Readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a demo of a simple Ruby on Rails application.
+With the application a logged in user can upload audio files.
+After uploading you can listen to it.
 
-Things you may want to cover:
+Unfortunately there aren't many audio formats supported in the browser.
+The ConvertToMp3Job can solve this by converting non-MP3 audio files to MP3.
 
-* Ruby version
+ConvertToMp3Job works with the streamio-ffmpeg gem.
+This requires ffmpeg installed on the server.
 
-* System dependencies
+GetAudioDurationJob retrieves the duration of the audio file.
 
-* Configuration
+## Installation
+```
+bundle install
+rails db:migrate db:seed
+rails s
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Testing
+```
+rails test
+```
