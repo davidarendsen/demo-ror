@@ -12,7 +12,8 @@ module TestingRor
     config.to_prepare do
       Administrate::ApplicationController.helper TestingRor::Application.helpers
     end
-    config.active_job.queue_adapter = :sidekiq
+
+    config.active_job.queue_adapter = :sidekiq if Rails.env.production?
     config.application_name = Rails.application.class.module_parent_name
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0

@@ -1,0 +1,6 @@
+<% cache ['v1', recording] do %>
+  <tr>
+    <td><%= link_to recording.title, recording_path(recording) %></td>
+    <td><%= recording.duration_formatted %></td>
+  </tr>
+<% end %>

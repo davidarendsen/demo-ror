@@ -1,0 +1,10 @@
+<h1>Recording: <%= @recording.title %> (<%= @recording.duration_formatted %>)</h1>
+
+<% if @recording.playable? %>
+  <audio id="recording_<%= @recording.id.to_s %>" controls 
+    src="<%= url_for(@recording.audio_file) %>" type="audio/mpeg">
+    Your browser does not support the audio element.</audio>
+<% else %>
+  Could not play file. Please wait a moment as we're trying to make it playable.
+  <%= link_to 'Reload', recording_path(@recording) %>
+<% end %>

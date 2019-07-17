@@ -1,2 +1,17 @@
-<h1>Welcome to Jumpstart!</h1>
-<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+<h1>Recordings</h1>
+
+<table class="table table-striped">
+  <thead>
+    <th>Subject</th>
+    <th>Duration</th>
+  </thead>
+  <tbody>
+    <% if @recordings.any? %>
+      <% @recordings.each do |recording| %>
+        <%= render recording %>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'More recordings...', recordings_path, class: 'btn btn-primary' %>

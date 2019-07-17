@@ -8,6 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("local-time").start()
+require("datatables.net-bs4")
 
 window.Rails = Rails
 
@@ -17,4 +18,6 @@ import 'data-confirm-modal'
 $(document).on("turbolinks:load", () => {
   $('[data-toggle="tooltip"]').tooltip()
   $('[data-toggle="popover"]').popover()
+  $('table').dataTable();
 })
+

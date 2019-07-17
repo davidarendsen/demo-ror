@@ -3,7 +3,7 @@
 one:
   recipient_id: 
   actor_id: 
-  read_at: 2019-07-17 18:05:37
+  read_at: 2019-07-16 20:14:30
   action: MyString
   notifiable_id: 
   notifiable_type: MyString
@@ -11,7 +11,7 @@ one:
 two:
   recipient_id: 
   actor_id: 
-  read_at: 2019-07-17 18:05:37
+  read_at: 2019-07-16 20:14:30
   action: MyString
   notifiable_id: 
   notifiable_type: MyString
